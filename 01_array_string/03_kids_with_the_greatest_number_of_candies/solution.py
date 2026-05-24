@@ -3,5 +3,13 @@
 
 class Solution:
     def kidsWithCandies(self, candies: list[int], extraCandies: int) -> list[bool]:
-        # TODO
-        return []
+        n = len(candies)
+        max = max(candies)
+        result = []
+
+        for i in range(n):
+            if candies[i] + extraCandies >= max:
+                result.append(True)
+            else:
+                result.append(False)
+        return result

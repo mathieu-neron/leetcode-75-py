@@ -1,8 +1,6 @@
 import pytest
 from solution import Solution
 
-pytestmark = pytest.mark.skip(reason="TODO: implement gcdOfStrings")
-
 
 @pytest.mark.parametrize("str1,str2,expected", [
     ('ABCABC', 'ABC', 'ABC'),

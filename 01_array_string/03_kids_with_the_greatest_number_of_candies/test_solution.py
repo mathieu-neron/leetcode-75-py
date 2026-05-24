@@ -1,8 +1,6 @@
 import pytest
 from solution import Solution
 
-pytestmark = pytest.mark.skip(reason="TODO: implement kidsWithCandies")
-
 
 @pytest.mark.parametrize("candies,extraCandies,expected", [
     ([2, 3, 5, 1, 3], 3, [True, True, True, False, True]),
