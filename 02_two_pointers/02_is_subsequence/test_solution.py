@@ -4,7 +4,9 @@ from solution import Solution
 pytestmark = pytest.mark.skip(reason="TODO: implement isSubsequence")
 
 
-def test_isSubsequence():
-    # TODO: example cases
-    # assert Solution().isSubsequence(...) == ...
-    pass
+@pytest.mark.parametrize("s,t,expected", [
+    ('abc', 'ahbgdc', True),
+    ('axc', 'ahbgdc', False)
+])
+def test_isSubsequence(s,t, expected):
+    assert Solution().isSubsequence(s,t) == expected

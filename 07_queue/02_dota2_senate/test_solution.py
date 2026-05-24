@@ -4,7 +4,9 @@ from solution import Solution
 pytestmark = pytest.mark.skip(reason="TODO: implement predictPartyVictory")
 
 
-def test_predictPartyVictory():
-    # TODO: example cases
-    # assert Solution().predictPartyVictory(...) == ...
-    pass
+@pytest.mark.parametrize("senate,expected", [
+    ('RD', 'Radiant'),
+    ('RDD', 'Dire')
+])
+def test_predictPartyVictory(senate, expected):
+    assert Solution().predictPartyVictory(senate) == expected

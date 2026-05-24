@@ -4,7 +4,10 @@ from solution import Solution
 pytestmark = pytest.mark.skip(reason="TODO: implement closeStrings")
 
 
-def test_closeStrings():
-    # TODO: example cases
-    # assert Solution().closeStrings(...) == ...
-    pass
+@pytest.mark.parametrize("word1,word2,expected", [
+    ('abc', 'bca', True),
+    ('a', 'aa', False),
+    ('cabbba', 'abbccc', True)
+])
+def test_closeStrings(word1,word2, expected):
+    assert Solution().closeStrings(word1,word2) == expected
