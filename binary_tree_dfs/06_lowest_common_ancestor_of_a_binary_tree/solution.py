@@ -1,0 +1,14 @@
+# LeetCode 236: Lowest Common Ancestor of a Binary Tree
+# https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+
+class TreeNode:
+    def __init__(self, val: int = 0, left: 'TreeNode => None' = None, right: 'TreeNode => None' = None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class Solution:
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+        # TODO
+        return None
