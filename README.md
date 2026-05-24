@@ -14,10 +14,10 @@ pip install -r requirements.txt
 
 ```pwsh
 # Single problem
-pytest two_pointers/01_move_zeroes -v
+pytest 02_two_pointers/01_move_zeroes -v
 
 # One category
-pytest two_pointers -v
+pytest 02_two_pointers -v
 
 # Everything
 pytest -v
