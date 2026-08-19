@@ -1,8 +1,6 @@
 import pytest
 from solution import Solution
 
-pytestmark = pytest.mark.skip(reason="TODO: implement longestOnes")
-
 
 @pytest.mark.parametrize("nums,k,expected", [
     ([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2, 6),
