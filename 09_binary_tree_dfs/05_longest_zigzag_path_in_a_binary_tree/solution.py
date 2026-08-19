@@ -10,5 +10,22 @@ class TreeNode:
 
 class Solution:
     def longestZigZag(self, root: TreeNode | None) -> int:
-        # TODO
-        return 0
+        max = 0
+
+        def dfs(node: TreeNode | None, is_left: bool, height: int) -> None:
+            if node is None:
+                return
+            nonlocal max
+            max = max(max, height)
+
+            if is_left:
+                dfs(node.left, True, 1)
+                dfs(node.right, False, height + 1)
+            else:
+                dfs(node.right, False, 1)
+                dfs(node.left, True, height + 1)
+
+        dfs(root, True, 0)
+        dfs(root, False, 0)
+
+        return max

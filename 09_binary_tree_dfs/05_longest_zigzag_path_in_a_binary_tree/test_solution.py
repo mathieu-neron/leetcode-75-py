@@ -52,8 +52,6 @@ def inorder(root):
         return []
     return inorder(root.left) + [root.val] + inorder(root.right)
 
-pytestmark = pytest.mark.skip(reason="TODO: implement longestZigZag")
-
 
 @pytest.mark.parametrize("tree,expected", [
     ([1, None, 1, 1, 1, None, None, 1, 1, None, 1, None, None, None, 1], 3),
